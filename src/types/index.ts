@@ -14,6 +14,7 @@ export type Product = {
   name: string;
   category: string;
   collectionId: string;
+  description: string;
   price: string;
   badge?: "New" | "Popular";
   image?: string;

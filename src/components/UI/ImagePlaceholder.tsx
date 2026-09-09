@@ -8,6 +8,7 @@ type ImagePlaceholderProps = {
   className?: string;
   variant?: "light" | "dark";
   kind?: ShoeIconKind;
+  iconClassName?: string;
 };
 
 const ICON_PATHS: Record<ShoeIconKind, string> = {
@@ -33,6 +34,7 @@ export default function ImagePlaceholder({
   className = "",
   variant = "light",
   kind = "sneaker",
+  iconClassName = "h-14 w-16 sm:h-16 sm:w-20",
 }: ImagePlaceholderProps) {
   if (src) {
     return (
@@ -59,7 +61,7 @@ export default function ImagePlaceholder({
         fill="none"
         stroke="currentColor"
         strokeWidth={1.4}
-        className={`h-14 w-16 sm:h-16 sm:w-20 ${isDark ? "text-gold/70" : "text-navy/25"}`}
+              className={`${iconClassName} ${isDark ? "text-gold/70" : "text-navy/25"}`}
       >
         <path strokeLinecap="round" strokeLinejoin="round" d={ICON_PATHS[kind]} />
         <path strokeLinecap="round" d="M5 44h46" />
