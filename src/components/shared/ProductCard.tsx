@@ -1,12 +1,12 @@
 import Link from "next/link";
-import ImagePlaceholder from "../../components/UI/ImagePlaceholder";
+import ImagePlaceholder from "../UI/ImagePlaceholder";
 import type { Product } from "../../types";
 
-export default function FeaturedProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group flex flex-col overflow-hidden rounded-lg border border-gray-light bg-white transition-shadow hover:shadow-md">
       <div className="relative">
-            <ImagePlaceholder src={product.image} alt={product.name} kind={product.iconKind} aspectRatio="aspect-square" />
+        <ImagePlaceholder src={product.image} alt={product.name} kind={product.iconKind} aspectRatio="aspect-square" />
         {product.badge && (
           <span className="absolute left-3 top-3 rounded-full bg-orange px-3 py-1 text-xs font-semibold text-navy">
             {product.badge}
@@ -27,4 +27,3 @@ export default function FeaturedProductCard({ product }: { product: Product }) {
     </div>
   );
 }
- 

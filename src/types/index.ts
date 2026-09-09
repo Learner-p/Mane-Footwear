@@ -13,6 +13,7 @@ export type Product = {
   id: string;
   name: string;
   category: string;
+  collectionId: string;
   price: string;
   badge?: "New" | "Popular";
   image?: string;
