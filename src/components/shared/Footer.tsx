@@ -26,14 +26,12 @@ export default function Footer() {
               A family footwear business with over 50 years of trusted
               service in Talegaon Dabhade, Maharashtra.
             </p>
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="mt-6 inline-block rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-navy transition-colors hover:bg-orange-dark"
             >
-              Chat on WhatsApp
-            </a>
+              Contact Us
+            </Link>
           </div>
 
           <div>
@@ -71,8 +69,7 @@ export default function Footer() {
               Visit Us
             </h2>
             <p className="mt-4">Talegaon Dabhade, Maharashtra, India</p>
-            <p className="mt-1.5">Phone: [9156310198]</p>
-            <p className="mt-1.5">Email: [manefootwear4406@gmail.com]</p>
+            <p className="mt-1.5 text-xs text-offwhite/60">Contact details coming soon.</p>
             <p className="mt-4 text-xs leading-relaxed text-offwhite/60">
               MANE FOOTWEAR is part of a family footwear business with a
               50+ year legacy and four retail locations across Talegaon
