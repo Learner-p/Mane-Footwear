@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Wordmark from "./Wordmark";
+import { siteContact, whatsappHref } from "../../data/contact";
 
 const SHOP_LINKS = [
   "Men's Footwear",
@@ -69,7 +70,26 @@ export default function Footer() {
               Visit Us
             </h2>
             <p className="mt-4">Talegaon Dabhade, Maharashtra, India</p>
-            <p className="mt-1.5 text-xs text-offwhite/60">Contact details coming soon.</p>
+        <p className="mt-1.5">
+          <a href={siteContact.phoneHref} className="hover:text-orange">
+            {siteContact.phone}
+          </a>
+        </p>
+        <p className="mt-1.5">
+          <a href={`mailto:${siteContact.email}`} className="hover:text-orange">
+            {siteContact.email}
+          </a>
+        </p>
+        <p className="mt-1.5">
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block hover:text-orange"
+          >
+            WhatsApp Us
+          </a>
+        </p>
             <p className="mt-4 text-xs leading-relaxed text-offwhite/60">
               MANE FOOTWEAR is part of a family footwear business with a
               50+ year legacy and four retail locations across Talegaon
