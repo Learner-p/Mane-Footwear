@@ -1,5 +1,4 @@
-import { branches } from "../../data/branches";
-import BranchCard from "./BranchCard";
+import Link from "next/link";
 
 export default function BranchNetwork() {
   return (
@@ -10,11 +9,12 @@ export default function BranchNetwork() {
           MANE FOOTWEAR is part of the same family business as three other
           footwear stores serving Talegaon Dabhade.
         </p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          {branches.map((branch) => (
-            <BranchCard key={branch.id} branch={branch} />
-          ))}
-        </div>
+        <Link
+          href="/branches"
+          className="mt-5 inline-flex items-center justify-center rounded-full border border-navy px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-offwhite"
+        >
+          See Our Stores
+        </Link>
       </div>
     </section>
   );
